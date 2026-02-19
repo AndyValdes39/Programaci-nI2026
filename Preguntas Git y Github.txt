@@ -1,0 +1,39 @@
+Andy David Valdés
+0907-25-29144
+
+¿Qué es GIT?
+Sistema de control de versiones distribuidos. Estos sistemas o programas controlan y administran las distintas versiones de un programa haciendo de estas accesibles y modificables por el usuario o varios usuarios que tengan acceso y permiso para alterarlo. Mediante esta herramienta es posible rebobinar cambios a archivos teniendo registro del día y hora en la que este fue modificado e igualmente que usuario ha modificado archivos o agregado nuevos.
+
+Conceptos de Git:
+Working Directory: Es el apartado donde el proyecto puede ser modificado, estos cambios son considerados como “Borradores” por lo que Git no los sigue continuamente.
+Staging Area: Estado en el que se agregan archivos al control de versiones de Git, pero estos no adquieren una confirmación directa de cambios al archivo original.
+Repository: Tiene la funcionalidad de albergar todo archivo correspondiente a un proyecto que haya tenido un cambio confirmado después de la creación de un Commit. 
+Commit: Foto de archivos anteriores tomada en momentos específicos, actúa como punto de guardado en el historial del proyecto lo que permite que se pueda acceder a una versión o alteración pasada en el proyecto.
+
+Comandos más importantes y su función.
+git init: Convierte una carpeta en un repositorio e Git. Este comando ayuda a indicarle al sistema operativo que un proyecto será utilizado en Git.
+git pull: Trae los archivos modificados por otros desarrolladores y los combina con los archivos que ya obtenidos.
+git clone: Permite la descarga de archivos provenientes de un repositorio remoto a una computadora personal para que el usuario pueda trabajar con estos.
+git config –global user.name (): Configurar el nombre de usuario.
+git config –global user.email (): Configurar el correo electrónico.
+git log: Permite ver el historial de todos los commits realizados.
+
+
+
+
+
+Comandos necesarios para subir cambios a un repositorio:
+
+git remote add origin; Crea una conexión directa de la computadora local con el repositor remoto.
+git push: Hace que el archivo se suba a un repositorio remoto para que esta pueda ser accedido por los desarrolladores que posee permiso para alterarlo.
+git push origin: Envía los cambios locales de archivos devuelta al repositorio remoto.
+git status: Funciona para verificar el estado en el que se encuentran los archivos, es decir; en donde es que están albergados.
+git add <file>: Añade archivos al Staging Area para que posteriormente puedan ser guardados el repositorio.
+git commit:  Sirve para pasar un archivo albergado en Staging Area al repositorio, creando un primer snapshot o foto de la versión del código.
+
+¿Qué es una branch?
+Rama de tiempo independiente en el proyecto, permite crear una alternativa modificable del código sin afectar al resto de este. La creación de una Branch permite realizar modificaciones al código sin temor a que alguna de estas modificaciones rompa el código ya funcional lo que abre las puertas a que se pueda experimentar, corregir errores o añadir archivos.
+
+¿Cuál es la diferencia entre Git y GitHub?
+Git: Es una herramienta de control de versiones la cual debe instalarse de forma local en una computadora, permite la creación de commits y branchs sin conexión a internet. Su función principal es gestionar versiones anteriores y modificaciones de un proyecto, una mayor parte de las interacciones que se hacen con la herramienta ocurren en una Terminal.
+Github: Es una plataforma de almacenamiento en la nube, para acceder a esta se hace por medio de un navegador web, con esta es posible compartir y ver repositorios de otras personas lo que permite compartirlos, modificarlos y respaldarlos. Posee una interfaz grafica con la que se puede interactuar de forma más sencilla.
