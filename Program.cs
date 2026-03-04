@@ -1,172 +1,110 @@
 ﻿using System;
-using System.ComponentModel.Design;
-using System.Security.AccessControl;
-using Microsoft.Win32;
-//Parte 2: Desafio 1
-/*class Program
+
+//Parte 1: Desafio 1
+static void CalcularIngresosUsuario()
 {
-    private static string usuariovalido = "";
-    private static string claveavalido = "";
+    Console.WriteLine("Ingrese el nombre del usuario:");
+    string nombreUsuario = Console.ReadLine();
 
 
-    static void Main()
+    double totalSuma = 0;
+    int meses = 3;
+    
+    
+    for (int i = 1; i <= meses; i++)
     {
-        Console.WriteLine("Bienvenido");
-        Registrar();
+        Console.Write($"Ingresa el ingreso del mes {i}: ");
         
-        Console.Write("Ingrese el usuario y clave: ");
-        IniciodeSesion();
-
-        Console.Write("Presione cualquier tecla para finalizar");
-        Console.ReadKey();
-        
-
+        totalSuma += Convert.ToDouble(Console.ReadLine());
     }
 
-    private static void Registrar()
+    
+    double promedio = totalSuma / meses;
+
+
+
+    Console.WriteLine($"\nHola {nombreUsuario}, el total de lo que ganaste suma {totalSuma} y promediaste {promedio}");
+}
+//CalcularIngresosUsuario();
+
+
+//Parte 1: Desafio 2
+
+    /*class Program
     {
-        Console.WriteLine("Registrar");
-        Console.Write("Crea un usuario: ");
-        usuariovalido = Console.ReadLine();
-        
-        Console.Write("Crea clave: ");
-        claveavalido = Console.ReadLine();
-        
-        Console.WriteLine("Registro valido");
-        
-        
-    }
-
-    private static void IniciodeSesion()
-    {
-        Console.Write("Ingrese el usuario: ");
-        string usuario = Console.ReadLine();
-        
-        Console.Write("Ingrese el clave: ");
-        string clavea = Console.ReadLine();
-
-
-        if (usuario == usuariovalido && clavea == claveavalido)
+        static void Calculadora()
         {
-            Console.WriteLine("Bienvenido " + usuariovalido);
-            
-        }
-        else
-        {
-            Console.WriteLine("Error, usuario y clave incorrectos");
-            
-            
-            
-        }
+            Console.WriteLine("Escriba el primer numero:");
+            int numero = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escriba el segundo numero:");
+            int numero2 = int.Parse(Console.ReadLine());
 
-            
+            Console.WriteLine("\n--Resultado");
+            Console.WriteLine($"Suma: {Sumar(numero, numero2)}");
+            Console.WriteLine($"Resta: {Restar(numero, numero2)}");
+            Console.WriteLine($"Multiplicacion: {Multiplicar(numero, numero2)}");
+            Console.WriteLine($"Dividir: {Dividir(numero, numero2)}");
 
-
-
-
-
-    }
-
-
-
-
-}*/
-
-
-//Parte 2: Desafio 2
-
-
-
-/*class Program
-{
-
-    static int puntajeRecord = 1;
-    static string jugadorRecord = "MVP";
-
-    static void Main()
-    {
-        bool continuar = true;
-
-        Console.WriteLine("Registro de records");
-        Console.WriteLine($"El puntaje record es de {puntajeRecord} por {jugadorRecord}");
-
-
-        while (continuar)
-        {
-            try
-            {
-                Console.Write("\nIngrese el nombre del jugador: ");
-                string nombreJugador = Console.ReadLine();
-
-                Console.WriteLine("\nIngrese el record del jugador: ");
-                int nombreRecord = int.Parse(Console.ReadLine());
-
-                Updaterecord(nombreRecord, nombreJugador);
-
-                Console.Write("\nIngresar otro puntaje?  s/n: ");
-                string respuesta = Console.ReadLine().ToLower();
-                if (respuesta != "s") continuar = false;
-
-
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error, por favor ingresar datos validos");
-                throw;
-            }
-
-            
 
 
 
 
         }
 
+        public static int Sumar(int a, int b)
+        {
+            return a + b;
+        }
+
+        public static int Restar(int a, int b)
+        {
+            return a - b;
+        }
+
+        public static int Dividir(int a, int b)
+        {
+            if (a / b == 0) return 0;
 
 
 
-    }
+            return a / b;
+        }
 
-    public static void Updaterecord(int nombreRecord, string nombreJugador)
+        public static int Multiplicar(int a, int b)
+        {
+            return a * b;
+
+        }
+
+    }*/
+
+//Parte 1: Desafio 3
+    static void ValidarSuma()
     {
-        if (nombreRecord >  puntajeRecord)
+        try
         {
-            puntajeRecord = nombreRecord;
-            jugadorRecord = nombreJugador;
-            
-            Console.WriteLine("Nuevo Record registrado! ");
-            Console.WriteLine($"El nuevo record ahora pertenece a  {nombreJugador} con la puntuacion de {nombreRecord}");
-            
+            Console.WriteLine("Ingresa el primer valor:");
+            int v1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ingresa el segundo valor:");
+            int v2 = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
+            Console.WriteLine($"Resultado de la suma {v1 + v2}");
 
         }
-        else
+        catch (Exception e)
         {
-            Console.WriteLine("Ningun record ha sido batido");
-            Console.WriteLine($"El record actual es de {nombreJugador} con {nombreRecord} puntos");
-            
-            
-            
-            
+            Console.WriteLine("Error en el programa, el valor introducido no es valido o no fue ingresado");
+            throw;
         }
-            
-
-
+        finally
+        {
+            Console.WriteLine("Saliendo del programa");
+            Console.ReadKey();
+        }
+        
+        
+        
     }
-    
-    
-    
-    
-    
-}*/
-    
-    
-    
-    
-    
+
+    //ValidarSuma();
 
